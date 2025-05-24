@@ -173,6 +173,7 @@ def _call_crawler(
         "fc2": fc2.main,
         "fc2hub": fc2hub.main,
         "fc2club": fc2club.main,
+        "fc2ppvdb": fc2ppvdb.main,
         "mdtv": mdtv.main,
         "madouqu": madouqu.main,
         "hscangku": hscangku.main,
@@ -230,7 +231,7 @@ def _call_crawler(
     elif website == "fc2club":
         res = json.loads(fc2club.main(file_number, appoint_url, language))
     elif website == "fc2ppvdb":
-        res = json.loads(fc2ppvdb.main(file_number, appoint_url, req_web, language))
+        res = json.loads(fc2ppvdb.main(file_number, appoint_url, language, file_path, appoint_number))
     elif website == "mdtv":
         res = json.loads(mdtv.main(file_number, appoint_url, language, file_path, appoint_number))
     elif website == "madouqu":
